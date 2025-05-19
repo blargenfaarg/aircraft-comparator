@@ -1,0 +1,20 @@
+.aircraft-select-container {
+    display:flex;
+    flex-direction:column;
+    margin-bottom: 20px;
+  }
+  
+  .aircraft-select-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color:black;
+    font-size: 30px;
+  }
+  
+  .aircraft-dropdown {
+    font-family: "HelveticaNeue";
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.5rem;
+  }
