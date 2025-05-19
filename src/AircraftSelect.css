@@ -5,9 +5,9 @@
   }
   
   .aircraft-select-container label {
-    margin-bottom: 5px;
+    margin-bottom: 16px;
     font-weight: bold;
-    color:black;
+    color:#5e5e5e;
     font-size: 30px;
   }
   
@@ -17,4 +17,5 @@
     border: 2px solid #ccc;
     border-radius: 8px;
     font-size: 1.5rem;
+    appearance: none;
   }
