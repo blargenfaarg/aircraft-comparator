@@ -2,7 +2,10 @@ import React, {useState, useEffect} from 'react';
 import aircraftData from './data/aircraft.json'
 import './AircraftSelect.css';
 
-function AircraftSelect({ label, onSelectAircraft }) {
+function AircraftSelect({ label, onSelectAircraft}) {
+
+    console.log('Value of onSelectAircraft prop:', onSelectAircraft);
+
     const [selectedAircraftId, setSelectedAircraftId] = useState('');
     const [aircraftList, setAircraftList] = useState([]);
   
