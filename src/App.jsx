@@ -16,10 +16,15 @@ function App() {
   };
 
   const handleCompareClick = () => {
-    if (airplane1 && airplane2)
+    if ((airplane1 && airplane2) && (airplane1 != airplane2))
     {
       console.log("Comparing: ", airplane1.name, "and", airplane2.name);
-    } else {
+    }
+    else if (airplane1 == airplane2) 
+    {
+      alert("Airplanes must be different!")
+    }
+    else {
       alert("Select both airplanes to continue.");
     }
   };
