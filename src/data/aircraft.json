@@ -5,14 +5,14 @@
         "length": 39.47,
         "wingspan": 34.32,
         "height": 12.55,
-        "svgFileName": "Boeing-737-800.svg"
+        "pngFileName": "boeing737.png"
     },
     {
-        "id": "airbus-a320",
-        "name": "Airbus A320",
-        "length": 37.57,
-        "wingspan": 35.8,
-        "height": 11.76,
-        "svgFileName": "Airbus-A320.svg"
+        "id": "boeing-747",
+        "name": "Boeing 747-400",
+        "length": 70.66,
+        "wingspan": 64.44,
+        "height": 19.41,
+        "pngFileName": "boeing747.png"
     }
 ]

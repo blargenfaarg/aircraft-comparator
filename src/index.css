@@ -35,6 +35,15 @@ h2 {
   margin-bottom: 120px;
 }
 
+.back-button {
+  padding-top: 20px;
+}
+
+.return-button {
+  text-align: center;
+  justify-content: center;
+}
+
 button {
   border-radius: 8px;
   border: 4px solid transparent;
