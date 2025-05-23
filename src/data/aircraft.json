@@ -14,5 +14,93 @@
         "wingspan": 64.44,
         "height": 19.41,
         "pngFileName": "boeing747.png"
+    },
+    {
+        "id": "concorde",
+        "name": "Aerospatiale Concorde",
+        "length": 61.66,
+        "wingspan": 25.6,
+        "height": 12.2,
+        "pngFileName": "concorde.png"
+    },
+    {
+        "id": "erj175",
+        "name": "Embraer 175",
+        "length": 31.67,
+        "wingspan": 26.01,
+        "height": 9.86,
+        "pngFileName": "erj175.png"
+    },
+    {
+        "id": "a380",
+        "name": "Airbus A380",
+        "length": 72.72,
+        "wingspan": 79.75,
+        "height": 24.09,
+        "pngFileName": "A380.png"
+    },
+    {
+        "id": "beechcraftb200",
+        "name": "Beechcraft Model 200",
+        "length": 13.36,
+        "wingspan": 17.65,
+        "height": 4.52,
+        "pngFileName": "BeechcraftB200.png"
+    },
+    {
+        "id": "cessna208",
+        "name": "Cessna 208 Caravan",
+        "length": 11.46,
+        "wingspan": 15.87,
+        "height": 4.53,
+        "pngFileName": "cessna208.png"
+    },
+    {
+        "id": "boeing757",
+        "name": "Boeing 757-200",
+        "length": 47.3,
+        "wingspan": 38.0,
+        "height": 13.6,
+        "pngFileName": "boeing757-200.png"
+    },
+    {
+        "id": "crj700",
+        "name": "Bombardier CRJ-700",
+        "length": 32.3,
+        "wingspan": 23.2,
+        "height": 7.6,
+        "pngFileName": "CRJ700.png"
+    },
+    {
+        "id": "crj1000",
+        "name": "Bombardier CRJ-1000",
+        "length": 39.1,
+        "wingspan": 26.2,
+        "height": 7.5,
+        "pngFileName": "CRJ1000.png"
+    },
+    {
+        "id": "global5000",
+        "name": "Bombardier Global 5000",
+        "length": 29.51,
+        "wingspan": 29,
+        "height": 7.77,
+        "pngFileName": "Global5000.png"
+    },
+    {
+        "id": "global7500",
+        "name": "Bombardier Global 7500",
+        "length": 34,
+        "wingspan": 32,
+        "height": 8.2,
+        "pngFileName": "Global7500.png"
+    },
+    {
+        "id": "learjet60",
+        "name": "Learjet 60",
+        "length": 17.88,
+        "wingspan": 13.34,
+        "height": 4.47,
+        "pngFileName": "Learjet60.png"
     }
 ]

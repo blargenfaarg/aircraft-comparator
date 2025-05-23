@@ -7,7 +7,10 @@ function AircraftSelect({ label, onSelectAircraft}) {
     const [aircraftList, setAircraftList] = useState([]);
   
     useEffect(() => {
-      setAircraftList(aircraftData);
+      const sortedAircraftList = [...aircraftData].sort((a, b) => {
+        return a.name.localeCompare(b.name);
+      });
+      setAircraftList(sortedAircraftList);
     }, []); 
   
     const handleSelectChange = (event) => {

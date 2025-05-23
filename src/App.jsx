@@ -8,7 +8,6 @@ function App() {
   const [airplane2, setAirplane2] = useState(null);
   const [showComparison, setShowComparison] = useState(false);
 
-
   const handleSelectAirplane1 = (aircraftData) => {
     setAirplane1(aircraftData);
   };
@@ -19,6 +18,15 @@ function App() {
 
   const handleCompareClick = () => {
     if ((airplane1 && airplane2) && (airplane1 != airplane2)) {
+      let largerPlane = airplane1;
+      let smallerPlane = airplane2;
+
+      if (airplane1.length < airplane2.length) {
+        largerPlane = airplane2;
+        smallerPlane = airplane1;
+      }
+      setAirplane1(largerPlane);
+      setAirplane2(smallerPlane);
       setShowComparison(true);
     }
     else if (airplane1 == airplane2) {
@@ -31,7 +39,7 @@ function App() {
 
   const handleReturnClick = () => {
     setShowComparison(false);
-  }
+  };
 
   return (
     <div className="App">
@@ -39,7 +47,7 @@ function App() {
         (
           <>
             <ComparisonView airplane1={airplane1} airplane2={airplane2} />
-            <div className ="back-button">
+            <div className="back-button">
               <button className="return-button" onClick={handleReturnClick}>Compare other Aircraft</button>
             </div>
           </>
@@ -53,21 +61,17 @@ function App() {
             <div className="selection-container">
               <AircraftSelect
                 label="Select Airplane 1"
-                onSelectAircraft={handleSelectAirplane1}
-              />
-
+                onSelectAircraft={handleSelectAirplane1}/>
               <AircraftSelect
                 label="Select Airplane 2"
-                onSelectAircraft={handleSelectAirplane2}
-              />
-
+                onSelectAircraft={handleSelectAirplane2}/>
               <button className="Compare" onClick={handleCompareClick}>
                 Compare Planes &#129034;
               </button>
-            </div> 
+            </div>
           </>
-          )
-        }
+        )
+      }
     </div>
   )
 }
