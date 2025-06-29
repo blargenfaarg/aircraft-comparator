@@ -102,5 +102,13 @@
         "wingspan": 13.34,
         "height": 4.47,
         "pngFileName": "Learjet60.png"
+    },
+    {
+        "id": "md80",
+        "name": "McDonnell Douglas MD-80",
+        "length": 45.06,
+        "wingspan": 32.82,
+        "height": 9.02,
+        "pngFileName": "MD80.png"
     }
 ]

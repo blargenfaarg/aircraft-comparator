@@ -28,6 +28,14 @@ h5 {
     letter-spacing:  -3px;
 }
 
+p1 {
+    color:rgb(0, 0, 0);
+    text-align: left;
+    font-size: 40px;
+    letter-spacing:  -3px;
+}
+
+
 .comparison-container {
     background-color: #f3f3f3;
     padding: 32px;

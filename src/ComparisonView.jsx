@@ -21,6 +21,7 @@ function ComparisonView({ airplane1, airplane2 }) {
   const airplane1ImageUrl = getImageUrl(airplane1?.pngFileName);
   const airplane2ImageUrl = getImageUrl(airplane2?.pngFileName);
   const [showOverlay, setShowOverlay] = useState(false);
+  const [showStats, setShowStats] = useState(false);
 
   const handleOverlayClick = () => {
     if (!showOverlay) {
@@ -29,6 +30,14 @@ function ComparisonView({ airplane1, airplane2 }) {
       setShowOverlay(false);
     }
   };
+
+  const handleStatsClick = () => {
+    if (!showStats) {
+      setShowStats(true);
+    } else {
+      setShowStats(false);
+    }
+  }
 
   function getImageUrl(filename) {
     return imageMap[filename] || null;
@@ -41,12 +50,13 @@ function ComparisonView({ airplane1, airplane2 }) {
 
   return (
     <>
-      <div className="title-container"> {/* The Title Text */}
+      <div className="title-container"> {/* Title Text */}
         <h3>{airplane1.name} </h3> <h5>&nbsp;compared to&nbsp;</h5>  <h4> {airplane2.name} </h4>
       </div>
 
       <div className="comparison-container"> {/* Comparison Background Container */}
         <button onClick={handleOverlayClick}>Toggle Overlay View</button>
+        <button onClick={handleStatsClick}>Show Stats</button>
 
         {showOverlay ? (
 
@@ -83,7 +93,16 @@ function ComparisonView({ airplane1, airplane2 }) {
           <> {/* Side-by-Side View of Aircrafts */}
             <div className="aircraft-wrapper">
               <h3>{airplane1.name}</h3>
-              {/* Overlay Aircraft Image 1 */}
+              {showStats ? (
+                <>
+                  <p1>Length: {airplane1.length} meters</p1>
+                  <br />
+                  <p1>Wingspan: {airplane1.wingspan} meters</p1>
+                  <br />
+                  <p1>Height: {airplane1.height} meters</p1>
+                </>
+              ) : (<></>)}
+
               {airplane1ImageUrl && (
                 <img
                   className='airplane-one'
@@ -96,7 +115,17 @@ function ComparisonView({ airplane1, airplane2 }) {
             </div>
             <div className="aircraft-wrapper">
               <h4>{airplane2.name}</h4>
-              {/* Overlay Aircraft Image 2 */}
+
+              {showStats ? (
+                <>
+                  <p1>Length: {airplane2.length} meters</p1>
+                  <br />
+                  <p1>Wingspan: {airplane2.wingspan} meters</p1>
+                  <br />
+                  <p1>Height: {airplane2.height} meters</p1>
+                </>
+              ) : (<></>)}
+
               {airplane2ImageUrl && (
                 <img
                   className='airplane-two'
