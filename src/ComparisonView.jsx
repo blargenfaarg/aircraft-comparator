@@ -54,13 +54,17 @@ function ComparisonView({ airplane1, airplane2 }) {
         <h3>{airplane1.name} </h3> <h5>&nbsp;compared to&nbsp;</h5>  <h4> {airplane2.name} </h4>
       </div>
 
-      <div className="comparison-container"> {/* Comparison Background Container */}
-        <button onClick={handleOverlayClick}>Toggle Overlay View</button>
-        <button onClick={handleStatsClick}>Show Stats</button>
+      <div className="comparison-container"> {/* Comparison Background Container */} 
 
         {showOverlay ? (
 
+          
+
           <> {/*--- Overlay View of Aircrafts --- */}
+
+          <div className="button-row-container">
+            <button onClick={handleOverlayClick}>Toggle Overlay View</button>
+          </div>
 
             {/* Aircraft Image 1 */}
             <div className="overlay-aircraft-wrapper">
@@ -91,6 +95,11 @@ function ComparisonView({ airplane1, airplane2 }) {
           </>
         ) : (
           <> {/* Side-by-Side View of Aircrafts */}
+
+            <div className="button-row-container">
+              <button onClick={handleStatsClick}>Show Stats</button>
+              <button onClick={handleOverlayClick}>Toggle Overlay View</button>
+            </div>
             <div className="aircraft-wrapper">
               <h3>{airplane1.name}</h3>
               {showStats ? (
