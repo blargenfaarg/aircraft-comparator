@@ -12,3 +12,10 @@
   padding: 2em;
 }
 
+.selection-container{
+  display:inline-flex;
+}
+
+.button-row {
+  margin-top:2%
+}

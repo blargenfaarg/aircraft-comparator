@@ -69,15 +69,20 @@ function App() {
 
             <div className="selection-container">
               <AircraftSelect
-                label="Select Airplane 1"
+                label="Add first airplane"
                 onSelectAircraft={handleSelectAirplane1} />
+
               <AircraftSelect
-                label="Select Airplane 2"
+                label="Add second airplane"
                 onSelectAircraft={handleSelectAirplane2} />
+            </div>
+
+            <div className="button-row">
               <button className="Compare" onClick={handleCompareClick}>
                 Compare Planes &#129034;
               </button>
             </div>
+            
           </>
         )
       }
