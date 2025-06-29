@@ -24,6 +24,7 @@ function ComparisonView({ airplane1, airplane2 }) {
   const [showStats, setShowStats] = useState(false);
 
   const handleOverlayClick = () => {
+    setShowStats(false);
     if (!showOverlay) {
       setShowOverlay(true);
     } else {
@@ -57,9 +58,6 @@ function ComparisonView({ airplane1, airplane2 }) {
       <div className="comparison-container"> {/* Comparison Background Container */} 
 
         {showOverlay ? (
-
-          
-
           <> {/*--- Overlay View of Aircrafts --- */}
 
           <div className="button-row-container">
@@ -100,9 +98,14 @@ function ComparisonView({ airplane1, airplane2 }) {
               <button onClick={handleStatsClick}>Show Stats</button>
               <button onClick={handleOverlayClick}>Toggle Overlay View</button>
             </div>
+
             <div className="aircraft-wrapper">
-              <h3>{airplane1.name}</h3>
-              {showStats ? (
+              <div className="aircraft-title">
+                <h3>{airplane1.name}</h3>
+              </div>
+
+              <div className="stats-container">
+                {showStats ? (
                 <>
                   <p1>Length: {airplane1.length} meters</p1>
                   <br />
@@ -111,7 +114,8 @@ function ComparisonView({ airplane1, airplane2 }) {
                   <p1>Height: {airplane1.height} meters</p1>
                 </>
               ) : (<></>)}
-
+              </div>
+              
               {airplane1ImageUrl && (
                 <img
                   className='airplane-one'
@@ -122,9 +126,13 @@ function ComparisonView({ airplane1, airplane2 }) {
                 />
               )}
             </div>
-            <div className="aircraft-wrapper">
-              <h4>{airplane2.name}</h4>
 
+            <div className="aircraft-wrapper">
+              <div className = "aircraft-title">
+                <h4>{airplane2.name}</h4>
+              </div>
+            
+              <div className = "stats-container">
               {showStats ? (
                 <>
                   <p1>Length: {airplane2.length} meters</p1>
@@ -134,7 +142,8 @@ function ComparisonView({ airplane1, airplane2 }) {
                   <p1>Height: {airplane2.height} meters</p1>
                 </>
               ) : (<></>)}
-
+              </div>
+              
               {airplane2ImageUrl && (
                 <img
                   className='airplane-two'

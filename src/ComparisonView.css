@@ -36,6 +36,7 @@ p1 {
     text-align: left;
     font-size: 40px;
     letter-spacing:  -3px;
+    line-height: 1.0rem;
 }
 
 .button-row-container{
@@ -53,6 +54,24 @@ p1 {
     width:100%;
     
 }
+
+.aircraft-wrapper {
+    position: relative; 
+    display:inline;
+}
+
+.aircraft-title{
+    position: relative;
+    display: inline;
+}
+
+.stats-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 
 .overlay-aircraft-wrapper {
     position: relative;
