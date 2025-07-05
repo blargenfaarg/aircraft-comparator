@@ -1,7 +1,23 @@
-# Aircraft Comparator
+# ✈️ Aircraft Comparator
 
-**Aircraft Comparator** is a web app that allows users to compare the physical designs and sizes of common aircraft.
+**Aircraft Comparator lets you compare the physical designs and dimensions of common aircraft, side-by-side.** <br>
+This provides a unique way for aviation enthusiasts, photographers, students, or anyone curious to visualize the true scale of planes.
 
-Current Aircraft Supported: Boeing 737-800, Boeing 747-400, Aerospatiale Concorde, Embraer 175
+<ins> **Aircraft Currently Supported:** </ins>
 
-Planned Aircraft: Airbus A320, Airbus A380, Boeing 777-300ER, Boeing 787-8 Dreamliner, McDonnell Douglas DC-10
+- Aerospatiale Concorde 
+- Airbus A380
+- Boeing 737-800 
+- Boeing 747-400 
+- Boeing 757-200 
+- Beechcraft Model 200 
+- Bombardier CRJ-700 
+- Bombardier CRJ-1000
+- Bombardier Global 5000
+- Bombardier Global 7500
+- Cessna 208 Caravan
+- Embraer 175
+- Learjet 60
+- McDonnell Douglas MD-80
+
+Planned Aircraft: Airbus A320, Boeing 777-300ER, Boeing 787-8 Dreamliner, McDonnell Douglas DC-10
