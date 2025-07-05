@@ -10,10 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "motion": "^12.19.2",
     "peers": "^0.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "vite-plugin-react-svg": "^0.2.0"
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

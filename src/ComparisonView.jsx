@@ -1,5 +1,7 @@
 import './ComparisonView.css';
 import { useState } from 'react'
+import { motion } from "motion/react"
+
 
 const imageModules = import.meta.glob('./assets/aircraft-pngs/*.png', { eager: true, query: '?url', import: 'default' });
 
@@ -51,18 +53,46 @@ function ComparisonView({ airplane1, airplane2 }) {
 
   return (
     <>
+
+    <motion.div
+      initial={{opacity: 0 }}
+      animate={{opacity: 1 }}
+      transition = {{ duration:1.0}}
+    >
       <div className="title-container"> {/* Title Text */}
         <h3>{airplane1.name} </h3> <h5>&nbsp;compared to&nbsp;</h5>  <h4> {airplane2.name} </h4>
       </div>
 
-      <div className="comparison-container"> {/* Comparison Background Container */} 
-
+      <div className="button-row-container">
+        {showOverlay ? (
+          <>
+            <button onClick={handleOverlayClick}>Toggle Overlay View</button>
+          </>
+        ) : (
+          <>
+            <button onClick={handleStatsClick}>Show Stats</button>
+            <button onClick={handleOverlayClick}>Toggle Overlay View</button>
+          </>
+        )}
+      </div>
+    </motion.div>
+      
+      <motion.div
+      variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                duration:2.0
+              }
+            }
+          }}
+          initial="hidden"
+          animate="show"
+      className="comparison-container"> {/* Comparison Background Container */}
+        
         {showOverlay ? (
           <> {/*--- Overlay View of Aircrafts --- */}
-
-          <div className="button-row-container">
-            <button onClick={handleOverlayClick}>Toggle Overlay View</button>
-          </div>
 
             {/* Aircraft Image 1 */}
             <div className="overlay-aircraft-wrapper">
@@ -93,12 +123,6 @@ function ComparisonView({ airplane1, airplane2 }) {
           </>
         ) : (
           <> {/* Side-by-Side View of Aircrafts */}
-
-            <div className="button-row-container">
-              <button onClick={handleStatsClick}>Show Stats</button>
-              <button onClick={handleOverlayClick}>Toggle Overlay View</button>
-            </div>
-
             <div className="aircraft-wrapper">
               <div className="aircraft-title">
                 <h3>{airplane1.name}</h3>
@@ -106,16 +130,16 @@ function ComparisonView({ airplane1, airplane2 }) {
 
               <div className="stats-container">
                 {showStats ? (
-                <>
-                  <p1>Length: {airplane1.length} meters</p1>
-                  <br />
-                  <p1>Wingspan: {airplane1.wingspan} meters</p1>
-                  <br />
-                  <p1>Height: {airplane1.height} meters</p1>
-                </>
-              ) : (<></>)}
+                  <>
+                    <p1>Length: {airplane1.length} meters</p1>
+                    <br />
+                    <p1>Wingspan: {airplane1.wingspan} meters</p1>
+                    <br />
+                    <p1>Height: {airplane1.height} meters</p1>
+                  </>
+                ) : (<></>)}
               </div>
-              
+
               {airplane1ImageUrl && (
                 <img
                   className='airplane-one'
@@ -128,22 +152,22 @@ function ComparisonView({ airplane1, airplane2 }) {
             </div>
 
             <div className="aircraft-wrapper">
-              <div className = "aircraft-title">
+              <div className="aircraft-title">
                 <h4>{airplane2.name}</h4>
               </div>
-            
-              <div className = "stats-container">
-              {showStats ? (
-                <>
-                  <p1>Length: {airplane2.length} meters</p1>
-                  <br />
-                  <p1>Wingspan: {airplane2.wingspan} meters</p1>
-                  <br />
-                  <p1>Height: {airplane2.height} meters</p1>
-                </>
-              ) : (<></>)}
+
+              <div className="stats-container">
+                {showStats ? (
+                  <>
+                    <p1>Length: {airplane2.length} meters</p1>
+                    <br />
+                    <p1>Wingspan: {airplane2.wingspan} meters</p1>
+                    <br />
+                    <p1>Height: {airplane2.height} meters</p1>
+                  </>
+                ) : (<></>)}
               </div>
-              
+
               {airplane2ImageUrl && (
                 <img
                   className='airplane-two'
@@ -156,9 +180,9 @@ function ComparisonView({ airplane1, airplane2 }) {
             </div>
           </>
         )}
-      </div>
+      </motion.div>
+      );
     </>
-  );
+  )
 }
-
-export default ComparisonView;
+      export default ComparisonView;

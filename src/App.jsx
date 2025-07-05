@@ -1,9 +1,12 @@
 import { useState } from 'react'
+import { useRef } from 'react'
+import { motion } from "motion/react";
 import AircraftSelect from './AircraftSelect.jsx';
 import ComparisonView from './ComparisonView.jsx';
 import './App.css'
 
 function App() {
+
   const [airplane1, setAirplane1] = useState(null);
   const [airplane2, setAirplane2] = useState(null);
   const [showComparison, setShowComparison] = useState(false);
@@ -48,10 +51,12 @@ function App() {
     setShowComparison(false);
   };
 
-  
-
   return (
-    <div className="App">
+    <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition = {{ duration:1.0}}
+    className="App">
       {showComparison ?
         (
           <>
@@ -86,8 +91,9 @@ function App() {
           </>
         )
       }
-    </div>
+    </motion.div>
   )
-}
+  }
+
 
 export default App

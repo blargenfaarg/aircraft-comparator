@@ -19,3 +19,11 @@
 .button-row {
   margin-top:2%
 }
+
+.fade-appear {
+  opacity:0;
+}
+
+.fade-appear.fade-appear-active {
+  opacity:1;
+}

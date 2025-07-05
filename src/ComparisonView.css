@@ -5,13 +5,11 @@
     font-size: 1.2em;
 }
 
-
 h3 {
     color:rgb(0, 60, 109);
     text-align: left;
     font-size: 40px;
     letter-spacing:  -3px;
-
 }
 
 h4 {
@@ -43,8 +41,8 @@ p1 {
     display:flex;
     column-gap:20px;
     justify-content: flex-end;
+    padding: 1.0rem;
 }
-
 
 .comparison-container {
     background-color: #f3f3f3;
@@ -52,7 +50,6 @@ p1 {
     border-radius: 32px;
     display:grid;
     width:100%;
-    
 }
 
 .aircraft-wrapper {
@@ -60,18 +57,17 @@ p1 {
     display:inline;
 }
 
-.aircraft-title{
+.aircraft-title {
     position: relative;
     display: inline;
 }
 
-.stats-container{
+.stats-container {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
-
 
 .overlay-aircraft-wrapper {
     position: relative;
