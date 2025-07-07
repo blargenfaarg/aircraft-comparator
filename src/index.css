@@ -1,5 +1,5 @@
 :root {
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
 
   color-scheme: light;
   color: rgba(255, 255, 255, 0.87);
@@ -27,7 +27,7 @@ h1 {
 
 h2 {
   color: black;
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   font-size: 40px;
   letter-spacing: -2px;
   line-height: 0px;
