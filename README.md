@@ -40,8 +40,5 @@ Note: All aircraft images were obtained at https://www.norebbo.com/
 - McDonnell Douglas MD-11
 
 ## 👨‍💻 Author
-Gerardo Cano / blargenfaarg - https://github.com/blargenfaarg
-
-## Credit
-Scott from Norebbo.com for the aircraft images - https://www.norebbo.com/
+blargenfaarg - https://github.com/blargenfaarg
 
