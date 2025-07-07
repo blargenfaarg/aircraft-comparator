@@ -1,22 +1,22 @@
 .aircraft-select-container {
-    display:flex;
-    flex-direction:column;
-    margin-bottom: 20px;
-    padding: 20px;
-    }
-  
-  .aircraft-select-container label {
-    margin-bottom: 16px;
-    font-weight: bold;
-    color:#5e5e5e;
-    font-size: 30px;
-  }
-  
-  .aircraft-dropdown {
-    font-family: "Inter";
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    font-size: 1.5rem;
-    appearance: none;
-  }
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.aircraft-select-container label {
+  margin-bottom: 16px;
+  font-weight: bold;
+  color: #5e5e5e;
+  font-size: 30px;
+}
+
+.aircraft-dropdown {
+  font-family: "Inter";
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  appearance: none;
+}
