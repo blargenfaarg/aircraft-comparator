@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import AircraftSelect from './AircraftSelect.jsx';
 import ComparisonView from './ComparisonView.jsx';
 import './App.css'
+import AppBar from './AppBar.jsx';
 
 function App() {
 
@@ -65,10 +66,10 @@ function App() {
               <button className="return-button" onClick={handleReturnClick}>Compare other Aircraft</button>
             </div>
           </>
-        ) : (
+        ) : ( 
           <>
             <header className="App-header">
-              <h1>Aircraft Comparator</h1>
+              <h1>✈️ Aircraft Comparator</h1>
               <h2>A neat way to visualize aircraft sizes</h2>
             </header>
 
@@ -87,6 +88,8 @@ function App() {
                 Compare Planes &#129034;
               </button>
             </div>
+
+            <AppBar></AppBar>
             
           </>
         )

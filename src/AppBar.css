@@ -1,0 +1,16 @@
+.icon-bar{
+    background-color: #f3f3f3;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    column-gap: 2em;
+    margin-top:8em;
+    width: fit-content;
+    margin-left:auto;
+}
+
+.social-icon {
+    width: 2em;
+    height: 2em;
+}

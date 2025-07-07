@@ -110,5 +110,21 @@
         "wingspan": 32.82,
         "height": 9.02,
         "pngFileName": "MD80.png"
+    },
+    {
+        "id": "f22",
+        "name": "Lockheed Martin F22 Raptor",
+        "length": 18.92,
+        "wingspan": 13.56,
+        "height": 5.08,
+        "pngFileName": "f22raptor.png"
+    },
+    {
+        "id": "p51",
+        "name": "North American P-51 Mustang",
+        "length": 9.83,
+        "wingspan": 11.28,
+        "height": 4.07,
+        "pngFileName": "p51mustang.png"
     }
 ]
