@@ -50,6 +50,8 @@ function App() {
 
   const handleReturnClick = () => {
     setShowComparison(false);
+    setAirplane1(null);
+    setAirplane2(null);
   };
 
   return (
