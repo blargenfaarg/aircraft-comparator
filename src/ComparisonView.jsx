@@ -24,6 +24,7 @@ function ComparisonView({ airplane1, airplane2 }) {
   const airplane2ImageUrl = getImageUrl(airplane2?.pngFileName);
   const [showOverlay, setShowOverlay] = useState(false);
   const [showStats, setShowStats] = useState(false);
+  const [showConversion, setShowConversion] = useState(false);
 
   const handleOverlayClick = () => {
     setShowStats(false);
@@ -42,6 +43,15 @@ function ComparisonView({ airplane1, airplane2 }) {
     }
   }
 
+  const handleUnitConversion = () => {
+    setShowConversion(true)
+    if (showConversion){
+      airplane1.length = airplane1.length * 3.281;
+      airplane1.wingspan = airplane1.wingspan * 3.281;
+      airplane1.height = airplane1.height * 3.281;
+    }
+  }
+
   function getImageUrl(filename) {
     return imageMap[filename] || null;
   }
@@ -53,49 +63,61 @@ function ComparisonView({ airplane1, airplane2 }) {
 
   return (
     <>
-
-    <motion.div
-      initial={{opacity: 0 }}
-      animate={{opacity: 1 }}
-      transition = {{ duration:1.0}}
-    >
-      <div className="title-container"> {/* Title Text */}
-        <h3>{airplane1.name} </h3> <h5>&nbsp;compared to&nbsp;</h5>  <h4> {airplane2.name} </h4>
-      </div>
-
-      <div className="button-row-container">
-        {showOverlay ? (
-          <>
-            <button onClick={handleOverlayClick}>Toggle Overlay View</button>
-          </>
-        ) : (
-          <>
-            <button onClick={handleStatsClick}>Show Stats</button>
-            <button onClick={handleOverlayClick}>Toggle Overlay View</button>
-          </>
-        )}
-      </div>
-    </motion.div>
-      
       <motion.div
-      variants={{
-            hidden: { opacity: 0 },
-            show: {
-              opacity: 1,
-              transition: {
-                duration:2.0
-              }
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.0 }}
+      >
+        <div className="title-container"> {/* Title Text */}
+          <h3>{airplane1.name} </h3> <h5>&nbsp;compared to&nbsp;</h5>  <h4> {airplane2.name} </h4>
+        </div>
+
+        <div className="button-row-container">
+          {showOverlay ? (
+            <>
+              <button onClick={handleOverlayClick}>Toggle Overlay View</button>
+            </>
+          ) : (
+            <>
+              <button onClick={handleStatsClick}>Show Stats</button>
+              <button onClick={handleOverlayClick}>Toggle Overlay View</button>
+            </>
+          )}
+        </div>
+      </motion.div>
+
+      <motion.div
+        variants={{
+          hidden: { opacity: 0 },
+          show: {
+            opacity: 1,
+            transition: {
+              duration: 2.0
             }
-          }}
-          initial="hidden"
-          animate="show"
-      className="comparison-container"> {/* Comparison Background Container */}
-        
+          }
+        }}
+        initial="hidden"
+        animate="show"
+        className="comparison-container"> {/* Comparison Background Container */}
+
         {showOverlay ? (
           <> {/*--- Overlay View of Aircrafts --- */}
 
+
             {/* Aircraft Image 1 */}
-            <div className="overlay-aircraft-wrapper">
+            <motion.div
+              variants={{
+                hidden: { opacity: 0 },
+                show: {
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5
+                  }
+                }
+              }}
+              initial="hidden"
+              animate="show"
+              className="overlay-aircraft-wrapper">
               {airplane1ImageUrl && (
                 <img
                   className='overlay-airplane-one'
@@ -105,11 +127,23 @@ function ComparisonView({ airplane1, airplane2 }) {
                   style={{ width: `${scaledWidth1}px`, height: 'auto' }}
                 />
               )}
-            </div>
+            </motion.div>
 
             {/* Aircraft Image 2 */}
 
-            <div className="overlay-aircraft-wrapper">
+            <motion.div
+            variants={{
+            hidden: { opacity: 0 },
+            show: {
+            opacity: 1,
+            transition: {
+              duration: 0.5
+            }
+          }
+        }}
+        initial="hidden"
+        animate="show"
+            className="overlay-aircraft-wrapper">
               {airplane2ImageUrl && (
                 <img
                   className='overlay-airplane-two'
@@ -119,11 +153,13 @@ function ComparisonView({ airplane1, airplane2 }) {
                   style={{ width: `${scaledWidth2}px`, height: 'auto' }}
                 />
               )}
-            </div>
+            </motion.div>
+
           </>
         ) : (
           <> {/* Side-by-Side View of Aircrafts */}
             <div className="aircraft-wrapper">
+
               <div className="aircraft-title">
                 <h3>{airplane1.name}</h3>
               </div>
@@ -181,8 +217,7 @@ function ComparisonView({ airplane1, airplane2 }) {
           </>
         )}
       </motion.div>
-      );
     </>
   )
 }
-      export default ComparisonView;
+export default ComparisonView;

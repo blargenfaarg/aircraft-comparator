@@ -113,7 +113,7 @@
     },
     {
         "id": "f22",
-        "name": "Lockheed Martin F22 Raptor",
+        "name": "Lockheed Martin F-22 Raptor",
         "length": 18.92,
         "wingspan": 13.56,
         "height": 5.08,
@@ -126,5 +126,149 @@
         "wingspan": 11.28,
         "height": 4.07,
         "pngFileName": "p51mustang.png"
+    },
+    {
+        "id": "a320",
+        "name": "Airbus A320",
+        "length": 37.57,
+        "wingspan": 35.8,
+        "height": 11.76,
+        "pngFileName": "a320.png"
+    },
+    {
+        "id": "b707",
+        "name": "Boeing 707-320",
+        "length": 46.61,
+        "wingspan": 44.42,
+        "height": 12.80,
+        "pngFileName": "boeing707.png"
+    },
+    {
+        "id": "b747-8",
+        "name": "Boeing 747-8",
+        "length": 76.25,
+        "wingspan": 68.45,
+        "height": 19.35,
+        "pngFileName": "boeing747-8.png"
+    },
+    {
+        "id": "b767",
+        "name": "Boeing 767-300",
+        "length": 54.94,
+        "wingspan": 47.57,
+        "height": 15.85,
+        "pngFileName": "boeing767-300.png"
+    },
+    {
+        "id": "b777",
+        "name": "Boeing 777-300",
+        "length": 73.86,
+        "wingspan": 60.93,
+        "height": 18.5,
+        "pngFileName": "boeing777-300.png"
+    },
+    {
+        "id": "b787-8",
+        "name": "Boeing 787-8",
+        "length": 56.72,
+        "wingspan": 60.12,
+        "height": 16.92,
+        "pngFileName": "boeing787-8.png"
+    },
+    {
+        "id": "c17",
+        "name": "Boeing C-17",
+        "length": 53,
+        "wingspan": 51.76,
+        "height": 16.79,
+        "pngFileName": "c17.png"
+    },
+    {
+        "id": "cessna172",
+        "name": "Cessna 172 Skyhawk",
+        "length": 8.28,
+        "wingspan": 11.00,
+        "height": 2.72,
+        "pngFileName": "cessna172skyhawk.png"
+    },
+    {
+        "id": "dc3",
+        "name": "Douglas DC-3",
+        "length": 19.7,
+        "wingspan": 29,
+        "height": 5.16,
+        "pngFileName": "dc3.png"
+    },
+    {
+        "id": "dc10",
+        "name": "McDonnell Douglas DC-10",
+        "length": 55.35,
+        "wingspan": 50.39,
+        "height": 17.55,
+        "pngFileName": "dc10.png"
+    },
+    {
+        "id": "f4",
+        "name": "McDonnell Douglas F-4 Phantom",
+        "length": 19.2,
+        "wingspan": 11.7,
+        "height": 5,
+        "pngFileName": "f4phantom.png"
+    },
+    {
+        "id": "md11",
+        "name": "McDonnell Douglas MD-11",
+        "length": 61.6,
+        "wingspan": 51.97,
+        "height": 17.65,
+        "pngFileName": "md11.png"
+    },
+    {
+        "id": "bf109",
+        "name": "Messerschmitt Bf 109",
+        "length": 8.95,
+        "wingspan": 9.925,
+        "height": 2.6,
+        "pngFileName": "bf109.png"
+    },
+    {
+        "id": "f15",
+        "name": "McDonnell Douglas F-15 Eagle",
+        "length": 19.43,
+        "wingspan": 13.06,
+        "height": 5.64,
+        "pngFileName": "f15.png"
+    },
+    {
+        "id": "f16",
+        "name": "General Dynamics F-16 Fighting Falcon",
+        "length": 15.06,
+        "wingspan": 9.96,
+        "height": 4.9,
+        "pngFileName": "f16.png"
+    },
+    {
+        "id": "f18",
+        "name": "McDonnell Douglas F/A-18 Hornet",
+        "length": 17.1,
+        "wingspan": 12.3,
+        "height": 4.7,
+        "pngFileName": "f18.png"
+    },
+    {
+        "id": "f35",
+        "name": "Lockheed Martin F-35 Lightning",
+        "length": 15.7,
+        "wingspan": 11,
+        "height": 4.4,
+        "pngFileName": "f35.png"
+    },
+    {
+        "id": "c130",
+        "name": "Lockheed C-130 Hercules",
+        "length": 29.79,
+        "wingspan": 40.41,
+        "height": 11.66,
+        "pngFileName": "c130.png"
     }
 ]

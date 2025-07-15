@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { useRef } from 'react'
 import { motion } from "motion/react";
 import AircraftSelect from './AircraftSelect.jsx';
 import ComparisonView from './ComparisonView.jsx';
@@ -7,7 +6,6 @@ import './App.css'
 import AppBar from './AppBar.jsx';
 
 function App() {
-
   const [airplane1, setAirplane1] = useState(null);
   const [airplane2, setAirplane2] = useState(null);
   const [showComparison, setShowComparison] = useState(false);
@@ -20,15 +18,15 @@ function App() {
     setAirplane2(aircraftData);
   };
 
-  const handleCompareClick = () => {
 
+  const handleCompareClick = () => {
     if (!airplane1 || !airplane2) {
-      alert("Select both airplanes to continue.");
+      alert("Select at least two airplanes to continue.");
       return;
     }
 
     if (airplane1.id === airplane2.id) {
-      alert("Please select two different airplanes for comparison.");
+      alert("Airplanes must be different.");
       return;
     }
 
@@ -42,10 +40,7 @@ function App() {
 
     setAirplane1(largerPlane);
     setAirplane2(smallerPlane);
-
     setShowComparison(true);
-
-
   };
 
   const handleReturnClick = () => {
