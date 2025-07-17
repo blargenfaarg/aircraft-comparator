@@ -96,18 +96,6 @@ function App() {
                   />
                 )
               ))}
-
-              {airplaneList.length < 4 && (
-                <>
-                <div className='add-button-container'>
-                  <button
-                    className="add-aircraft-button"
-                    onClick={() => setAirplaneList([...airplaneList, null])}
-                  >+</button>
-                </div>
-                </>
-              
-              )}
             </div>
 
             {airplaneList.length >= 2 && (
