@@ -21,7 +21,7 @@ body {
 h1 {
   font-size: 6rem;
   color: black;
-  letter-spacing: -4px;
+  letter-spacing: -0.3rem;
   line-height: normal;
 }
 
@@ -36,29 +36,30 @@ h2 {
 }
 
 h3 {
-    text-align: left;
-    font-size: 5rem;
-    letter-spacing:  -0.2rem;
-    
+  text-align: left;
+  font-size: 3rem;
+  letter-spacing: -0.2rem;
+  margin-block-end: 0.5rem;
+  margin-block-start: 0.5rem;
 }
 
 h5 {
-    color: black;
-    font-size: 2.5rem;
-    letter-spacing:  -0.2rem;
-    margin-top:3rem;
-    margin-bottom:3rem;
+  color: black;
+  font-size: 2.5rem;
+  letter-spacing: -0.2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 button {
-  border-radius: 1rem;
-  padding: 1rem;
-  font-size: 2rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
   font-family: inherit;
-  background-color: #363636;
+  background-color: #1b1b1b;
   cursor: pointer;
   transition: border-color 0.25s;
-  color: white
+  color: white;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -72,13 +73,11 @@ button {
     font-size: 2rem;
   }
 
-  h3{
-    font-size:5vw;
+  h3 {
+    font-size: 5vw;
   }
 
-  h5{
-
-  }
+  h5 {}
 
   .selection-container {
     flex-direction: column;
@@ -94,7 +93,7 @@ button {
     border-radius: 2vw;
   }
 
- 
+
 }
 
 
@@ -109,7 +108,6 @@ button {
 }
 
 
-
 button:hover {
   border-color: #8482fd;
 }
@@ -117,10 +115,4 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-.selection-container {
-  background-color: #f3f3f3;
-  padding: 32px;
-  border-radius: 32px;
 }

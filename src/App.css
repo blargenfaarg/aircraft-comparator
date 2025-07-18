@@ -13,7 +13,11 @@
 }
 
 .selection-container{
-  display:inline-flex;
+  display:flex;
+  justify-content: space-around;
+  background-color: #f3f3f3;
+  padding: 2rem;
+  border-radius: 2rem;
 }
 
 .button-row {
