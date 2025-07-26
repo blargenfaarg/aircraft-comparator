@@ -20,3 +20,11 @@
   font-size: 1.5rem;
   appearance: auto;
 }
+
+@media only screen and (max-width: 1024px) {
+  .aircraft-select-container{
+    padding-left: 0;
+    padding-right: 0;
+    width: 50% 
+  }
+}

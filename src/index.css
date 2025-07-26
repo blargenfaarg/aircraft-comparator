@@ -64,27 +64,30 @@ button {
 
 @media only screen and (max-width: 1024px) {
   h1 {
-    white-space: nowrap;
-    font-size: 5rem;
+    font-size: 9vw;
   }
 
   h2 {
-    white-space: nowrap;
-    font-size: 2rem;
+    font-size: 4vw;
+    margin-top: -4vw;
   }
 
   h3 {
     font-size: 5vw;
   }
 
-  h5 {}
+  h5 {
+    font-size: 1.5rem;
+    margin-block-end: 1rem;
+    margin-block-start: 1rem;
+  }
 
   .selection-container {
     flex-direction: column;
-  }
-
-  .add-button-container {
-    justify-content: center;
+    row-gap: 3rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   button {
@@ -96,23 +99,11 @@ button {
 
 }
 
-
-
-.back-button {
-  padding-top: 20px;
+.return-button-container {
+  padding-top: 2rem;
 }
 
 .return-button {
   text-align: center;
   justify-content: center;
-}
-
-
-button:hover {
-  border-color: #8482fd;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }

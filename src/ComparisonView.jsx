@@ -3,7 +3,6 @@ import { useState } from 'react'
 
 const imageModules = import.meta.glob('./assets/aircraft-pngs/*.png', { eager: true, query: '?url', import: 'default' });
 
-/* Get the filename (ex: erj175.png) */
 const getFilenameFromPath = (path) => {
   const parts = path.split('/');
   return parts[parts.length - 1];
@@ -54,17 +53,17 @@ function ComparisonView({ airplanes }) {
           {showOverlay ?
             (
               <>
-              <div className = 'overlay-aircraft-text'>
-                
-              {airplanes.map((aircraft) => (
-                <h5 style = {{
-                  color: `${aircraft.assignedTextFilter}`
-                }}
-                >&nbsp;{aircraft.name} </h5>
-              ))}
+                <div className='overlay-aircraft-text'>
 
-              </div>
-              
+                  {airplanes.map((aircraft) => (
+                    <h5 style={{
+                      color: `${aircraft.assignedTextFilter}`
+                    }}
+                    >&nbsp;{aircraft.name} </h5>
+                  ))}
+
+                </div>
+
                 {airplanes.map((aircraft, index) => (
                   <>
                     <img
